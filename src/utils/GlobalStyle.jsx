@@ -5,8 +5,10 @@ import { ThemeContexte } from "./Context";
 const SGlobalStyle = createGlobalStyle`
 body{
     box-sizing: border-box;
+    direction: rtl;
     background-color : ${(props) => (props.isDarkMode ? "#202124" : "#d3f2e7")};
     color : ${(props) => (props.isDarkMode ? "white" : "black")};
+
 }
 .BackgroundImg{
   width: 100%;

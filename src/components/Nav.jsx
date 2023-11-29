@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeContexte } from "../utils/Context";
 import { useContext } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Theme = styled.li`
   cursor: pointer;
@@ -13,7 +14,7 @@ export default function Nav() {
   return (
     <div>
       <ul>
-        <li style={{position:'relative'}}>Home</li>
+        <Link to="/" style={{position:'relative'}}>Home</Link>
         <Theme onClick={() => toggleTheme()}>
           {theme === 'light' ? "🌙" : "☀️"}
         </Theme>

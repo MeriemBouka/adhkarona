@@ -1,3 +1,5 @@
 export const colors ={
-    green : "#1c3033" ,
+    gableGreen : "#1c3033" ,
+    lacquerGreen :"#182b25",
+    gainsboro  : "#e2e2e2"
 }
