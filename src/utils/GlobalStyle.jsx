@@ -6,17 +6,13 @@ const SGlobalStyle = createGlobalStyle`
 body{
     box-sizing: border-box;
     direction: rtl;
-    background-color : ${(props) => (props.isDarkMode ? "#202124" : "#d3f2e7")};
-    color : ${(props) => (props.isDarkMode ? "white" : "black")};
+}
+*{
+    background-color : ${(props) => (props.isDarkMode ? "#202124" : "#153c2d")};
+    color : ${(props) => (props.isDarkMode ? "#a18855" : "#ffe6a8")};
+    font-family: "Noto Naskh Arabic";
+}
 
-}
-.BackgroundImg{
-  width: 100%;
-  position:absolute;
-  top: 0px;
-  left : 0px;
-  z-index: -1;
-}
 `;
 
 export default function GlobalStyle() {
