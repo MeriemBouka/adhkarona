@@ -4,11 +4,7 @@ import { useParams } from "react-router-dom";
 import SlideShow from "../components/SlideShow";
 import styled from "styled-components";
 
-
-const InvoContainer = styled.div `
-
-`
-
+const InvoContainer = styled.div``;
 
 const Invocations = () => {
   const { idParams } = useParams();
@@ -19,7 +15,10 @@ const Invocations = () => {
   return (
     <InvoContainer>
       {currentCategory && (
-        <SlideShow slides={currentCategory.invocations} category={currentCategory.category}/>
+        <SlideShow
+          slides={currentCategory.invocations}
+          category={currentCategory.category}
+        />
       )}
     </InvoContainer>
   );

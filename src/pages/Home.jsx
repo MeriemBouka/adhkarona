@@ -14,8 +14,6 @@ const MainContainer = styled.main`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
-  
 `;
 export default function Home() {
   return (

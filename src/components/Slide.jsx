@@ -4,7 +4,8 @@ import styled from "styled-components";
 const Content = styled.div`
 height: 330px;
 width: 200px;
-  border: solid 2px #a77b24;
+  border: 2px solid transparent; /* Bordure transparente */
+  box-shadow: 0 0 10px 2px #cba247; /* Ombre dorée */
   margin-top: 50px;
   border-radius: 15px;
   display: flex;
@@ -16,7 +17,7 @@ width: 200px;
 `;
 const Titre = styled.h3`
 position: absolute;
-top: -5px;
+top: -15px;
 `
 
 const Title = styled.h4`

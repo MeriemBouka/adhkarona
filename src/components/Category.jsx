@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Carte = styled.article`
-cursor: pointer;
+  cursor: pointer;
   border: 1px solid;
   width: 100px;
   height: 90px;

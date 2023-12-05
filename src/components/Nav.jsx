@@ -14,6 +14,7 @@ const NavigationBar = styled.div`
 
 const Logo = styled.img`
   width: 100%;
+  pointer-events: none;
 `;
 
 const NavList = styled.ul`
@@ -24,13 +25,15 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-    cursor: pointer;
+  cursor: pointer;
   list-style: none;
   margin-left: 15px;
   transition: transform 0.3s ease; /* Ajoute une transition pour l'effet fluide */
 
   &:active {
-    transform: translateY(-10px); /* Déplace l'élément de 10 pixels vers le haut lors du clic */
+    transform: translateY(
+      -10px
+    ); /* Déplace l'élément de 10 pixels vers le haut lors du clic */
   }
 `;
 
