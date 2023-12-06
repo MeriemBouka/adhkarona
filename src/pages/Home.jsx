@@ -17,14 +17,12 @@ const MainContainer = styled.main`
 `;
 export default function Home() {
   return (
-    <div>
-      <MainContainer>
-        {data.map((category) => (
-          <Lien key={`cat${category.id}`} to={`/invocations/${category.id}`}>
-            <Category key={`cat${category.id}`} category={category.category} />
-          </Lien>
-        ))}
-      </MainContainer>
-    </div>
+    <MainContainer>
+      {data.map((category) => (
+        <Lien key={`cat${category.id}`} to={`/invocations/${category.id}`}>
+          <Category key={`cat${category.id}`} category={category.category} />
+        </Lien>
+      ))}
+    </MainContainer>
   );
 }

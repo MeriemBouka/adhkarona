@@ -3,7 +3,7 @@ import { ThemeContexte } from "../utils/Context";
 import { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import home from "../assets/favicon-32x32.png";
+import home from "../assets/home.png";
 import logo from "../assets/logo-border.png";
 import moon from "../assets/moon.png";
 import sun from "../assets/sun.png";
@@ -22,18 +22,33 @@ const NavList = styled.ul`
   justify-content: center;
   padding-right: 0px;
   padding-top: 15px;
+  @media screen and (min-width: 992px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 `;
 
 const NavItem = styled.li`
   cursor: pointer;
   list-style: none;
   margin-left: 15px;
-  transition: transform 0.3s ease; /* Ajoute une transition pour l'effet fluide */
+  transition: transform 0.3s ease;
 
   &:active {
-    transform: translateY(
-      -10px
-    ); /* Déplace l'élément de 10 pixels vers le haut lors du clic */
+    transform: translateY(-10px);
+  }
+  @media screen and (min-width: 992px) {
+    &:hover {
+      transform: scale(1.2);
+    }
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+`;
+const IconImage = styled.img`
+  width: 32px;
+  @media screen and (min-width: 992px) {
+    width: 90px;
   }
 `;
 
@@ -45,11 +60,11 @@ export default function Nav() {
       <NavList>
         <NavItem>
           <Link to="/" style={{ position: "relative" }}>
-            <img alt="Home" src={home} />
+            <IconImage alt="Home" src={home} />
           </Link>
         </NavItem>
         <NavItem onClick={() => toggleTheme()}>
-          <img alt="mode" src={theme === "light" ? moon : sun} />
+          <IconImage alt="mode" src={theme === "light" ? moon : sun} />
         </NavItem>
       </NavList>
     </NavigationBar>
