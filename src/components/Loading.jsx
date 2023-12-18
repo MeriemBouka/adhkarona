@@ -12,8 +12,12 @@ const fadeOut = keyframes`
 `;
 
 const StyledImage = styled.img`
- width:100%;
+    width:100%;
   animation: ${fadeOut} 2.5s linear forwards;
+  @media screen and (min-width: 800px){
+    width: 50%;
+  
+  }
 `;
 
 const Loading = ({ opacity }) => {
